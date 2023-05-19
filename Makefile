@@ -16,5 +16,5 @@ status:
 clean:
 	atlas schema apply \
 		--url=$(PG_URL) \
-		--to file://supabase/db_migrations?version=20230519092225 \
+		--to file://migrations?version=20230519092225 \
 		--dev-url "docker://postgres/15"

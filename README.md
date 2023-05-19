@@ -42,3 +42,8 @@ make status
 #### Rollback with Atlas
 
 TBD
+
+## Creating a new migration
+
+The atlas schema definition is located under `schema` folder.
+Once you modify the schema you'll need to run `make gen` to generate the corresponded migration.

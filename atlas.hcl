@@ -1,8 +1,8 @@
 env "local" {
-  src = "file://supabase/schema"
+  src = "file://schema"
 
   migration {
-    dir = "file://supabase/db_migrations"
+    dir = "file://migrations"
     format = atlas
   }
 
