@@ -2,13 +2,13 @@
 PG_URL=postgresql://postgres:postgres@localhost:54322/postgres?sslmode=disable
 
 introspect:
-	atlas schema inspect -u "$(PG_URL)" --schema public
+	atlas schema inspect -u "$(PG_URL)" --schema auth --schema public > schema/00_supabase.hcl
 
 gen:
 	atlas migrate diff --env local
 
 apply:
-	atlas migrate apply --env local --allow-dirty
+	atlas migrate apply --baseline "20230519114524" --env local
 
 status:
 	atlas migrate status --env local

@@ -16,6 +16,19 @@ table "profiles" {
     }
   }
 
+  column "user_id" {
+    null = false
+    type = uuid
+
+  }
+
+  foreign_key "profile_user_id_fkey" {
+    columns     = [column.user_id]
+    ref_columns = [table.auth.users.column.id]
+    on_update   = NO_ACTION
+    on_delete   = NO_ACTION
+  }
+
   column "name" {
     null = false
     type = text

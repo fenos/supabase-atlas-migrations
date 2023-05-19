@@ -1,5 +1,2 @@
 
 schema "private" {}
-
-schema "public" {}
-

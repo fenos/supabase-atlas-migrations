@@ -6,7 +6,7 @@ env "local" {
     format = atlas
   }
 
-  schemas = ["public", "private"]
+  schemas = ["public", "private", "auth"]
 
   // Define the URL of the database which is managed
   // in this environment.
